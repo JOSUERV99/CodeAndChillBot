@@ -1,0 +1,15 @@
+{
+
+    "defaultRange" : [ 0 , 10 ],
+    "limits": [ -1000000, 1000000 ],
+    "trollMessages": [
+        "Si, si muy gracioso pa!",
+        "Eso mandeme basura bro!",
+        "Lactando como siempre pa!",
+        "Deje esa vida señor!",
+        "Yupi, tenemos un imbecil por aqui!",
+        "Are you ok bro? :peppa_hmm: ",
+        "Felicidades, bro! :thinkcompass:"
+    ],
+    "presentation": "Tu numero es: =>"
+}
