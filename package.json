@@ -1,0 +1,31 @@
+{
+  "name": "CodeAndChillBot",
+  "version": "1.0.0",
+  "description": "Discord bot for Code&amp;Chill server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOSUERV99/CodeAndChillBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JOSUERV99/CodeAndChillBot/issues"
+  },
+  "homepage": "https://github.com/JOSUERV99/CodeAndChillBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "nodemon": "^2.0.6"
+  }
+}
