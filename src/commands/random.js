@@ -5,6 +5,7 @@ const { randomMessage } = require('../utils/rand');
 module.exports = {
     name : 'randomint',
     description : 'Return a random number, using the range ...',
+    help: '<num1> <num2>',
     async execute(message, args) {
 
         if ( !allNumbers(args) ) {

@@ -4,6 +4,7 @@ const { server_id } = require('../config.json');
 module.exports = {
     name : 'randomuser',
     description : 'Return a random user? ...',
+    help : '',
     async execute(message) {
 
         // TODO: get random users and generate a cool card 

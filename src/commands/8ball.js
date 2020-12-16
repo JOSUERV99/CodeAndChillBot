@@ -5,6 +5,7 @@ const { responses } = require('../data/8ball.json');
 module.exports = {
     name : '8ball',
     description : 'Let the magic 8 ball decide for your future!',
+    help: '<question>',
     execute(message, args) {
         if (args.length > 0) {
             const embed = new Discord.MessageEmbed()
