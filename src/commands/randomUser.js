@@ -14,7 +14,7 @@ module.exports = {
         let noBotUsers = users.filter( user => !user.user.bot ).map( user => user.user.username );
 
         const congratsMessage = new Discord.MessageEmbed()
-            .setTitle("(8) ball")
+            .setTitle("And the lucky one is ...")
             .setColor(0x00A2A2)
             .setDescription(`${randomMessage(noBotUsers)}\n ${congrats_message}`)
             .setThumbnail("https://i.imgur.com/XF0jOkw.png");
