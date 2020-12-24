@@ -1,14 +1,24 @@
+const Discord = require('discord.js');
 const { congrats_message }  = require('../data/randomUser.json');
 const { server_id } = require('../config.json');
+const { randomMessage } = require('../utils/rand');
 
 module.exports = {
     name : 'randomuser',
     description : 'Return a random user? ...',
     help : '',
-    async execute(message) {
+    execute(message, _) {
 
-        // TODO: get random users and generate a cool card 
-        // with the profile picture, info and congrats message
-        message.reply(' Por implementar');
+        // users who have written to the channel
+        let users = message.channel.members.array();
+        let noBotUsers = users.filter( user => !user.user.bot ).map( user => user.user.username );
+
+        const congratsMessage = new Discord.MessageEmbed()
+            .setTitle("(8) ball")
+            .setColor(0x00A2A2)
+            .setDescription(`${randomMessage(noBotUsers)}\n ${congrats_message}`)
+            .setThumbnail("https://i.imgur.com/XF0jOkw.png");
+
+        message.channel.send(congratsMessage);  
     } 
 };
