@@ -4,7 +4,8 @@ const commands = [
     require('./8ball'), 
     require('./hi'), 
     require('./random'), 
-    require('./randomUser') 
+    require('./randomUser'),
+    require('./music')
 ];
 
 module.exports = {
