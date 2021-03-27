@@ -22,4 +22,6 @@ client.once('ready', () => {
 client.on('message', (message) => handleMessage(message, client));
 client.login(process.env.BOT_TOKEN);
 
+process.on('SIGINT', () => client.destroy()); // close client when sigint (program interruption) occurs
+
 module.exports = client;
