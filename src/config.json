@@ -1,5 +1,6 @@
 {
     "prefix" : "&" ,
     "param_prefix" : "--",
-    "server_id" : "770696750255702037"
+    "server_id" : "770696750255702037",
+    "db" : "HEAVENDISCORDBOT2021"
 }
