@@ -6,7 +6,7 @@ const { randomMessage } = require('../utils/rand');
 module.exports = {
     name : 'randomuser',
     description : 'Return a random user? ...',
-    help : '',
+    help : 'This command use all the users that already write something in the text channel, to create a raffle create a new text channel and all the participants need to write something in it and later run the command!',
     execute(message, _) {
 
         // users who have written to the channel

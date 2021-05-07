@@ -1,12 +1,20 @@
 const Discord =  require('discord.js');
+const fs = require('fs');
+const path = require('path');
+
 const { prefix } = require('../config.json');
-const commands = [ 
-    require('./8ball'), 
-    require('./hi'), 
-    require('./random'), 
-    require('./randomUser'),
-    require('./music')
-];
+
+const getCommands = () => {
+
+    console.log(__dirname);
+    const commandsPath = fs.readdirSync(__dirname).filter(file => !['help.js', 'music.js'].includes(file) );
+    console.log(commandsPath);
+
+    return commandsPath.filter(file => file.endsWith('.js')).map(file => {
+        const command = require(`./${file}`);
+        return `*${prefix}${command.name}* ${command.help}\n${command.description}\n`
+    });
+}
 
 module.exports = {
     name : 'help',
@@ -14,15 +22,10 @@ module.exports = {
     help : '',
     execute(message) {
 
-        let content = '';
-        for (let command of commands) {
-            content += `${prefix}${command.name} ${command.help}\n${command.description}\n\n`;
-        }
-
         const helpEmbed = new Discord.MessageEmbed()
             .setColor('#00dddd')
             .setTitle('Code&Chill Bot Help!')
-            .setDescription(`${content}`)
+            .setDescription(`${getCommands().join('\n')}`)
             .setThumbnail('https://i.imgur.com/L06H5iC.png')
             .setTimestamp();
 
