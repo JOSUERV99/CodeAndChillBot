@@ -2,9 +2,9 @@ const Discord  = require('discord.js');
 const { mongoClient } = require('../db');
 
 module.exports = {
-    name : 'phrase',
+    name : 'profestec',
     description : 'Set or get a random TEC teacher phrase!',
-    help: 'phrase || phrase <author> <phrase....>\n Example: phrase Mauricio me confirmas?',
+    help: 'profestec || profestec <author> <phrase....>\n Example: profestec Mauricio me confirmas?',
     async execute(message, args) {
         
         if (args.length > 1) // insert phrase
